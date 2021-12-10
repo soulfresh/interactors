@@ -28,23 +28,16 @@ module.exports = {
     format: 'cjs',
   }],
   plugins: [
-    resolve(),
-    commonjs({
-      include: ["node_modules/**"],
-      namedExports: {
-        "lodash.isequal": [
-          "isEqual",
-        ],
-        "@interactors/globals": [
-          "globals"
-        ]
-      }
+    resolve({
+      jsnext: true,
+      main: true,
+      browser: true
     }),
-    // babel({
-    //   babelHelpers: 'bundled',
-    //   // TODO Get this working with:
-    //   // babelHelpers: 'runtime',
-    //   exclude: 'node_modules/**'
-    // }),
+    commonjs({
+      include: 'node_modules/**'
+    }),
+    babel({
+      exclude: 'node_modules/**',
+    })
   ],
 }

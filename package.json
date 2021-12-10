@@ -40,13 +40,17 @@
     "eslint-plugin-jest": "^25.3.0",
     "jest": "^27.4.4",
     "jsdoc-to-markdown": "^7.1.0",
+    "lodash.isequal": "^4.5.0",
     "release-it": "^14.11.8",
     "rimraf": "^3.0.2",
     "rollup": "^2.61.0",
     "rollup-plugin-commonjs": "^10.1.0"
   },
-  "dependencies": {
-    "@interactors/html": "^1.0.0-rc1.0",
-    "lodash.isequal": "^4.5.0"
+  "dependencies": {},
+  "peerDependencies": {
+    "@interactors/html": "^1.0.0-rc1.0"
+  },
+  "optionalDependencies": {
+    "@testing-library/dom": "^8.11.1"
   }
 }
