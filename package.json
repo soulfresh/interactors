@@ -25,8 +25,7 @@
     "docs": "jsdoc2md --files src/**/*.js -g grouped --template readme.hbs > README.md",
     "validate": "yarn clean && yarn test && yarn docs && yarn build",
     "tree-shakeable": "agadoo src/index",
-    "release": "release-it && npm publish",
-    "before:init": "yarn validate"
+    "release": "yarn validate && release-it && echo '!!! Now run `npm publish` !!!'"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
