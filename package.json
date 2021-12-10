@@ -25,7 +25,7 @@
     "docs": "jsdoc2md --files src/**/*.js -g grouped --template readme.hbs > README.md",
     "validate": "yarn clean && yarn test && yarn docs && yarn build",
     "tree-shakeable": "agadoo src/index",
-    "release": "release-it",
+    "release": "release-it && npm publish",
     "before:init": "yarn validate"
   },
   "devDependencies": {
@@ -58,7 +58,7 @@
   },
   "release-it": {
     "npm": {
-      "skipChecks": true
+      "publish": false
     }
   }
 }
