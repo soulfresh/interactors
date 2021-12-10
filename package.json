@@ -1,0 +1,52 @@
+{
+  "name": "interactors",
+  "version": "0.0.1",
+  "description": "interactors and matchers for bigtest",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "files": [
+    "src/*",
+    "lib/*"
+  ],
+  "sideEffects": false,
+  "repository": "git@github.com:soulfresh/interactors.git",
+  "author": "Marc Wren <things@soul-fresh.com>",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "test": "jest",
+    "test-debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
+    "lint": "eslint --max-warnings 0 './src/**/!(.eslintrc)*.{js,jsx}'",
+    "clean": "rimraf lib",
+    "docs": "jsdoc2md --files src/*.js -g grouped > API.md",
+    "tree-shackable": "agadoo src/index",
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/preset-env": "^7.16.4",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "agadoo": "^2.0.0",
+    "babel-jest": "^27.4.4",
+    "eslint": "^8.4.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.3.0",
+    "jest": "^27.4.4",
+    "jsdoc-to-markdown": "^7.1.0",
+    "release-it": "^14.11.8",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.61.0",
+    "rollup-plugin-commonjs": "^10.1.0"
+  },
+  "dependencies": {
+    "@interactors/html": "^1.0.0-rc1.0",
+    "lodash.isequal": "^4.5.0"
+  }
+}
