@@ -57,7 +57,7 @@
     "@testing-library/dom": "^8.11.1"
   },
   "release-it": {
-    "git": {
+    "npm": {
       "skipChecks": true
     }
   }
