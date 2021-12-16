@@ -61,10 +61,5 @@
   },
   "optionalDependencies": {
     "@testing-library/dom": "^8.11.1"
-  },
-  "release-it": {
-    "npm": {
-      "publish": false
-    }
   }
 }
