@@ -17,6 +17,8 @@ function testId(el) {
  * - label : '[aria-label]'
  * - text : better text matching
  * - role : '[role]'
+ *
+ * @type {function}
  */
 export const HTMLPageObject = BigTestHTML.extend('element')
   .filters({

@@ -1,6 +1,7 @@
 import { innerText } from '@interactors/html';
 
 /**
+ * @private
  * A configurable text normalizer.
  *
  * @param {object} options
@@ -24,14 +25,16 @@ export function getDefaultNormalizer({
 };
 
 /**
+ * @private
  * The default text noralize function that will remove
  * whitespace around and within element text content.
  */
 export const normalizeText = getDefaultNormalizer();
 
 /**
- * Get the text inside of an element using the default
- * text normalizer.
+ * Get the text inside of an element. This is similar to the
+ * `innerText` function from `@interactors/core` but will also
+ * trim the text.
  * @param {HTMLElement} element
  * @return {string}
  */
@@ -40,6 +43,7 @@ export function elementText(element) {
 }
 
 /**
+ * @private
  * Get the trimmed text content from an elment.
  *
  * @param {HTMLElement} el
@@ -48,6 +52,7 @@ export function elementText(element) {
 export const elementTextValue = el => elementText(el);
 
 /**
+ * @private
  * Get the input element values from inside an element.
  * If the element contains more than one child input,
  * their values are combined with commans.
@@ -60,6 +65,7 @@ export const elementValue = el => Array.from(el?.querySelectorAll('input'))
   .join(', ');
 
 /**
+ * @private
  * Get the aria-label values from inside an element.
  * If the element contains more than one child with an
  * aria-label, those labels are combined with commas.
@@ -77,13 +83,22 @@ export const elementLabelValue = el => {
 };
 
 /**
- * Get the readable value from an element. This can
+ * Get the "user readable" value from an element. This can
  * include its text, aria-label, input values, etc.
+ *
+ * This function is most useful if don't know the type of
+ * element you are reading and it could be one of multiple
+ * different types (ex. input or div). For example, given
+ * an array of table cells containing plain text and inputs,
+ * you could get the readable text for all of them using
+ * `elements.map(el => elementContent(el, ['text', 'value'])`.
+ *
  * You can customize the order that values are retrieved
- * and which types of content are searched for. If
- * the element includes multiple children with the
- * same type of content, those values are combined
- * with commas.
+ * and which types of content are searched for using the `checks`
+ * parameter. If the element includes multiple children with the
+ * same type of content, you can either recieve just the first
+ * value or collect them into a comma separated string using
+ * the `collect` parameter.
  *
  * ```js
  * // Given the following HTML
