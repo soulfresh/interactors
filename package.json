@@ -25,7 +25,7 @@
     "docs": "yarn clean && node ./scripts/typedocs/index.js build src/index.js --out index.md --templates ./docs/templates --repo https://github.com/soulfresh/interactors/tree/main/src",
     "validate": "yarn clean && yarn test && yarn docs && yarn build",
     "tree-shakeable": "agadoo src/index",
-    "release": "yarn validate && release-it && echo '!!! Now run `npm publish` !!!'"
+    "release": "echo '🤬 use npx release-it 👈'"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
