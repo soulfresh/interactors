@@ -65,7 +65,7 @@
   },
   "release-it": {
     "hooks": {
-      "after:init": "yarn validate"
+      "after:init": ["yarn validate"]
     }
   }
 }

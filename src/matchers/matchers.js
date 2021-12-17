@@ -341,6 +341,7 @@ export function equal(expected) {
 
 /**
  * @private
+ * Private until sub-matching is implemented.
  * Alias for `equal`
  */
 export const equals = equal;

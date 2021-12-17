@@ -337,7 +337,7 @@ Match any number greater than the given value.
 
 
 #### Defined in
-- *[matchers/matchers.js:352](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L352)*
+- *[matchers/matchers.js:353](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L353)*
 
 ## greaterThanOrEqualTo
 
@@ -359,7 +359,7 @@ Match any number greater than or equal to the given value.
 
 
 #### Defined in
-- *[matchers/matchers.js:369](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L369)*
+- *[matchers/matchers.js:370](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L370)*
 
 ## greaterThanOrEqual
 
@@ -381,7 +381,7 @@ alias for `greaterThanOrEqualTo`
 
 
 #### Defined in
-- *[matchers/matchers.js:383](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L383)*
+- *[matchers/matchers.js:384](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L384)*
 
 ## lessThan
 
@@ -403,7 +403,7 @@ Match any number less than the given value.
 
 
 #### Defined in
-- *[matchers/matchers.js:389](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L389)*
+- *[matchers/matchers.js:390](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L390)*
 
 ## lessThanOrEqualTo
 
@@ -425,7 +425,7 @@ Match any number less than or equal to the given value.
 
 
 #### Defined in
-- *[matchers/matchers.js:406](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L406)*
+- *[matchers/matchers.js:407](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L407)*
 
 ## lessThanOrEqual
 
@@ -447,7 +447,7 @@ Alias for `lessThanOrEqualTo`
 
 
 #### Defined in
-- *[matchers/matchers.js:420](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L420)*
+- *[matchers/matchers.js:421](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L421)*
 
 # util
 
