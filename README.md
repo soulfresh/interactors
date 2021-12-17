@@ -114,7 +114,7 @@ it('should have the correct cell data.', await () => {
 `any`
 
 #### Defined in
-- *[interactors/table.js:72](https://github.com/soulfresh/interactors/tree/main/src/interactors/table.js#L72)*
+- *[interactors/table.js:73](https://github.com/soulfresh/interactors/tree/main/src/interactors/table.js#L73)*
 
 # matchers
 
