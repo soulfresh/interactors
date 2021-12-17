@@ -26,7 +26,8 @@
     "open-docs": "open -a \"Google Chrome\" ./README.md",
     "validate": "yarn clean && yarn test && yarn docs && yarn build",
     "tree-shakeable": "agadoo src/index",
-    "release": "echo '🤬 use npx release-it 👈'"
+    "after:init": "yarn validate",
+    "release": "echo '🤬 USE >>>>>> npx release-it <<<<<< 👈'"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
