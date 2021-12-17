@@ -20,8 +20,6 @@ no replacement for actual accessibility testing).
   - <a href="#any">any</a>
   - <a href="#anything">anything</a>
   - <a href="#is">is</a>
-  - <a href="#equal">equal</a>
-  - <a href="#equals">equals</a>
   - <a href="#greaterthan">greaterThan</a>
   - <a href="#greaterthanorequalto">greaterThanOrEqualTo</a>
   - <a href="#greaterthanorequal">greaterThanOrEqual</a>
@@ -319,52 +317,6 @@ Strict equality check (ie ===).
 #### Defined in
 - *[matchers/matchers.js:306](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L306)*
 
-## equal
-
-  ▸ **equal**(`expected`) => `void`
-
-Lose equality check using lodash isEqual.
-
-Note: This currently does not handle
-sub-matching.
-
-
-
-#### Parameters
-| Name | Type | Default Value | Description |
-| :--- | :--- | :------------ | :---------- |
-  | expected | `any` | *-* | *-* |
-
-
-#### Returns
-`void` 
-
-
-#### Defined in
-- *[matchers/matchers.js:325](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L325)*
-
-## equals
-
-  ▸ **equals**(`expected`) => `void`
-
-Alias for `equal`
-
-
-
-
-#### Parameters
-| Name | Type | Default Value | Description |
-| :--- | :--- | :------------ | :---------- |
-  | expected | `any` | *-* | *-* |
-
-
-#### Returns
-`void` 
-
-
-#### Defined in
-- *[matchers/matchers.js:340](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L340)*
-
 ## greaterThan
 
   ▸ **greaterThan**(`expected`) => `void`
@@ -385,7 +337,7 @@ Match any number greater than the given value.
 
 
 #### Defined in
-- *[matchers/matchers.js:346](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L346)*
+- *[matchers/matchers.js:352](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L352)*
 
 ## greaterThanOrEqualTo
 
@@ -407,7 +359,7 @@ Match any number greater than or equal to the given value.
 
 
 #### Defined in
-- *[matchers/matchers.js:363](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L363)*
+- *[matchers/matchers.js:369](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L369)*
 
 ## greaterThanOrEqual
 
@@ -429,7 +381,7 @@ alias for `greaterThanOrEqualTo`
 
 
 #### Defined in
-- *[matchers/matchers.js:377](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L377)*
+- *[matchers/matchers.js:383](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L383)*
 
 ## lessThan
 
@@ -451,7 +403,7 @@ Match any number less than the given value.
 
 
 #### Defined in
-- *[matchers/matchers.js:383](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L383)*
+- *[matchers/matchers.js:389](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L389)*
 
 ## lessThanOrEqualTo
 
@@ -473,7 +425,7 @@ Match any number less than or equal to the given value.
 
 
 #### Defined in
-- *[matchers/matchers.js:400](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L400)*
+- *[matchers/matchers.js:406](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L406)*
 
 ## lessThanOrEqual
 
@@ -495,7 +447,7 @@ Alias for `lessThanOrEqualTo`
 
 
 #### Defined in
-- *[matchers/matchers.js:414](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L414)*
+- *[matchers/matchers.js:420](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L420)*
 
 # util
 
@@ -573,7 +525,7 @@ const combined = elementContent(el, ['value', 'text'], true);
 | Name | Type | Default Value | Description |
 | :--- | :--- | :------------ | :---------- |
   | el | `HTMLElement` | *-* | *-* |
-  | checks |  | `...` | The list of content  types to retrieve. |
+  | checks |  | `...` | The list of content  types to retrieve. Your options are &#x27;text&#x27;, &#x27;value&#x27;  for inputs, &#x27;label&#x27; for aria-label. |
   | collect | `boolean` | `false` | false &#x3D; return the value  of the first matching content type. true &#x3D; use  all matching values. |
 
 
@@ -583,5 +535,5 @@ const combined = elementContent(el, ['value', 'text'], true);
 
 
 #### Defined in
-- *[util/text-matching.js:132](https://github.com/soulfresh/interactors/tree/main/src/util/text-matching.js#L132)*
+- *[util/text-matching.js:133](https://github.com/soulfresh/interactors/tree/main/src/util/text-matching.js#L133)*
 

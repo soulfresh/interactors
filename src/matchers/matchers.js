@@ -316,6 +316,9 @@ export function is(expected) {
 };
 
 /**
+ * @private
+ * Private until sub-matching is implemented.
+ *
  * Lose equality check using lodash isEqual.
  *
  * Note: This currently does not handle
@@ -336,7 +339,10 @@ export function equal(expected) {
   };
 };
 
-/** Alias for `equal` */
+/**
+ * @private
+ * Alias for `equal`
+ */
 export const equals = equal;
 
 /**

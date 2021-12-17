@@ -123,7 +123,8 @@ export const elementLabelValue = el => {
  *
  * @param {HTMLElement} el
  * @param {string[]} checks - The list of content
- *   types to retrieve.
+ *   types to retrieve. Your options are 'text', 'value'
+ *   for inputs, 'label' for aria-label.
  * @param {boolean} collect - false = return the value
  *   of the first matching content type. true = use
  *   all matching values.
