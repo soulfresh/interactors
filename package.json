@@ -26,7 +26,6 @@
     "open-docs": "open -a \"Google Chrome\" ./README.md",
     "validate": "yarn clean && yarn test && yarn docs && yarn build",
     "tree-shakeable": "agadoo src/index",
-    "after:init": "yarn validate",
     "release": "echo '🤬 USE >>>>>> npx release-it <<<<<< 👈'"
   },
   "devDependencies": {
@@ -63,5 +62,10 @@
   },
   "optionalDependencies": {
     "@testing-library/dom": "^8.11.1"
+  },
+  "release-it": {
+    "hooks": {
+      "after:init": "yarn validate"
+    }
   }
 }
