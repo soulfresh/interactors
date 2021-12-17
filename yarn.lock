@@ -945,6 +945,19 @@
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
 
+"@interactors/core@1.0.0-rc1.2":
+  version "1.0.0-rc1.2"
+  resolved "https://registry.yarnpkg.com/@interactors/core/-/core-1.0.0-rc1.2.tgz#df76e71dd6f961e8d68fe4ea5a438d5d3a197830"
+  integrity sha512-+u1gOrfsaRblqoTtdBTANiDOGXXLlERlOHev8Yb9iAfvpMFgmz9mvy5ZCjkMO+y4Kd+Xanr35ZPGzTD+wvf+1w==
+  dependencies:
+    "@interactors/globals" "1.0.0-rc1.1"
+    "@testing-library/dom" "^8.5.0"
+    "@testing-library/user-event" "^13.2.1"
+    change-case "^4.1.1"
+    element-is-visible "^1.0.0"
+    lodash.isequal "^4.5.0"
+    performance-api "^1.0.0"
+
 "@interactors/core@^1.0.0-rc1.0":
   version "1.0.0-rc1.0"
   resolved "https://registry.yarnpkg.com/@interactors/core/-/core-1.0.0-rc1.0.tgz#cb8204e051382021c6e21285c17ef9d5a1e92f7a"
@@ -958,10 +971,31 @@
     lodash.isequal "^4.5.0"
     performance-api "^1.0.0"
 
+"@interactors/globals@1.0.0-rc1.1":
+  version "1.0.0-rc1.1"
+  resolved "https://registry.yarnpkg.com/@interactors/globals/-/globals-1.0.0-rc1.1.tgz#85d4bfd514313c0cbf9b013c4e4fc6ca36ff181e"
+  integrity sha512-liLDRok1UeKQi9YrLzSfxXMTYY9Pl+SxxvhpxPoJ8xFbRVYmuGRXfkKOLEV0NBrEzg2t0ZLX0joukSUEnSd54A==
+
 "@interactors/globals@^1.0.0-rc1.0":
   version "1.0.0-rc1.0"
   resolved "https://registry.yarnpkg.com/@interactors/globals/-/globals-1.0.0-rc1.0.tgz#5b3cb25245fd6c2ac801d4abd1af8838d240ed77"
   integrity sha512-js1pND/mgaOcLEmaX/HKbfEyD57zGStsQ06QISFRBl942zlQpnQQsmXUcr7NI/vASvcEYDsZo6aqadiQOmw28Q==
+
+"@interactors/html@^1.0.0-rc1.2":
+  version "1.0.0-rc1.2"
+  resolved "https://registry.yarnpkg.com/@interactors/html/-/html-1.0.0-rc1.2.tgz#3791e4e432ffbf326b172dc2490005763247b38b"
+  integrity sha512-/MPv+AfjC9gtpNeYrtb2f8PB8OOwqojibaz1/Qyu0f7tfq4zR1BdEfHnORfv3EWA/WFuUWHN4BsxvKTPS0fPvw==
+  dependencies:
+    "@interactors/core" "1.0.0-rc1.2"
+    "@interactors/keyboard" "1.0.0-rc1.2"
+
+"@interactors/keyboard@1.0.0-rc1.2":
+  version "1.0.0-rc1.2"
+  resolved "https://registry.yarnpkg.com/@interactors/keyboard/-/keyboard-1.0.0-rc1.2.tgz#6cacb59c78754d490c4f7715ab4e6095bea70280"
+  integrity sha512-CaT057/OIbo/jovrVjPbcngaRpbT2LML5xq20cZ8s+0RD932DEEnhplm+B333JXcSrucmaWXCsP34BU3DQMbew==
+  dependencies:
+    "@interactors/core" "1.0.0-rc1.2"
+    "@interactors/globals" "1.0.0-rc1.1"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -1129,6 +1163,27 @@
     fast-json-stable-stringify "^2.0.0"
     graceful-fs "^4.2.4"
     jest-haste-map "^27.4.4"
+    jest-regex-util "^27.4.0"
+    jest-util "^27.4.2"
+    micromatch "^4.0.4"
+    pirates "^4.0.1"
+    slash "^3.0.0"
+    source-map "^0.6.1"
+    write-file-atomic "^3.0.0"
+
+"@jest/transform@^27.4.5":
+  version "27.4.5"
+  resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-27.4.5.tgz#3dfe2e3680cd4aa27356172bf25617ab5b94f195"
+  integrity sha512-PuMet2UlZtlGzwc6L+aZmR3I7CEBpqadO03pU40l2RNY2fFJ191b9/ITB44LNOhVtsyykx0OZvj0PCyuLm7Eew==
+  dependencies:
+    "@babel/core" "^7.1.0"
+    "@jest/types" "^27.4.2"
+    babel-plugin-istanbul "^6.0.0"
+    chalk "^4.0.0"
+    convert-source-map "^1.4.0"
+    fast-json-stable-stringify "^2.0.0"
+    graceful-fs "^4.2.4"
+    jest-haste-map "^27.4.5"
     jest-regex-util "^27.4.0"
     jest-util "^27.4.2"
     micromatch "^4.0.4"
@@ -1799,6 +1854,20 @@ babel-jest@^27.4.4:
     graceful-fs "^4.2.4"
     slash "^3.0.0"
 
+babel-jest@^27.4.5:
+  version "27.4.5"
+  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-27.4.5.tgz#d38bd0be8ea71d8b97853a5fc9f76deeb095c709"
+  integrity sha512-3uuUTjXbgtODmSv/DXO9nZfD52IyC2OYTFaXGRzL0kpykzroaquCrD5+lZNafTvZlnNqZHt5pb0M08qVBZnsnA==
+  dependencies:
+    "@jest/transform" "^27.4.5"
+    "@jest/types" "^27.4.2"
+    "@types/babel__core" "^7.1.14"
+    babel-plugin-istanbul "^6.0.0"
+    babel-preset-jest "^27.4.0"
+    chalk "^4.0.0"
+    graceful-fs "^4.2.4"
+    slash "^3.0.0"
+
 babel-plugin-dynamic-import-node@^2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-2.3.3.tgz#84fda19c976ec5c6defef57f9427b3def66e17a3"
@@ -1851,6 +1920,15 @@ babel-plugin-polyfill-regenerator@^0.3.0:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.0"
 
+babel-polyfill@^6.26.0:
+  version "6.26.0"
+  resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.26.0.tgz#379937abc67d7895970adc621f284cd966cf2153"
+  integrity sha1-N5k3q8Z9eJWXCtxiHyhM2WbPIVM=
+  dependencies:
+    babel-runtime "^6.26.0"
+    core-js "^2.5.0"
+    regenerator-runtime "^0.10.5"
+
 babel-preset-current-node-syntax@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/babel-preset-current-node-syntax/-/babel-preset-current-node-syntax-1.0.1.tgz#b4399239b89b2a011f9ddbe3e4f401fc40cff73b"
@@ -1876,6 +1954,14 @@ babel-preset-jest@^27.4.0:
   dependencies:
     babel-plugin-jest-hoist "^27.4.0"
     babel-preset-current-node-syntax "^1.0.0"
+
+babel-runtime@^6.26.0:
+  version "6.26.0"
+  resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
+  integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
+  dependencies:
+    core-js "^2.4.0"
+    regenerator-runtime "^0.11.0"
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -2308,6 +2394,11 @@ core-js-compat@^3.18.0, core-js-compat@^3.19.1:
   dependencies:
     browserslist "^4.18.1"
     semver "7.0.0"
+
+core-js@^2.4.0, core-js@^2.5.0:
+  version "2.6.12"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
+  integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
 cosmiconfig@7.0.1:
   version "7.0.1"
@@ -3881,6 +3972,26 @@ jest-haste-map@^27.4.4:
   optionalDependencies:
     fsevents "^2.3.2"
 
+jest-haste-map@^27.4.5:
+  version "27.4.5"
+  resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-27.4.5.tgz#c2921224a59223f91e03ec15703905978ef0cc1a"
+  integrity sha512-oJm1b5qhhPs78K24EDGifWS0dELYxnoBiDhatT/FThgB9yxqUm5F6li3Pv+Q+apMBmmPNzOBnZ7ZxWMB1Leq1Q==
+  dependencies:
+    "@jest/types" "^27.4.2"
+    "@types/graceful-fs" "^4.1.2"
+    "@types/node" "*"
+    anymatch "^3.0.3"
+    fb-watchman "^2.0.0"
+    graceful-fs "^4.2.4"
+    jest-regex-util "^27.4.0"
+    jest-serializer "^27.4.0"
+    jest-util "^27.4.2"
+    jest-worker "^27.4.5"
+    micromatch "^4.0.4"
+    walker "^1.0.7"
+  optionalDependencies:
+    fsevents "^2.3.2"
+
 jest-jasmine2@^27.4.4:
   version "27.4.4"
   resolved "https://registry.yarnpkg.com/jest-jasmine2/-/jest-jasmine2-27.4.4.tgz#1fcdc64de932913366e7d5f2960c375e1145176e"
@@ -4120,6 +4231,15 @@ jest-worker@^27.4.4:
   version "27.4.4"
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-27.4.4.tgz#9390a97c013a54d07f5c2ad2b5f6109f30c4966d"
   integrity sha512-jfwxYJvfua1b1XkyuyPh01ATmgg4e5fPM/muLmhy9Qc6dmiwacQB0MLHaU6IjEsv/+nAixHGxTn8WllA27Pn0w==
+  dependencies:
+    "@types/node" "*"
+    merge-stream "^2.0.0"
+    supports-color "^8.0.0"
+
+jest-worker@^27.4.5:
+  version "27.4.5"
+  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-27.4.5.tgz#d696e3e46ae0f24cff3fa7195ffba22889262242"
+  integrity sha512-f2s8kEdy15cv9r7q4KkzGXvlY0JTcmCbMHZBfSQDwW77REr45IDWwd0lksDFeVHH2jJ5pqb90T77XscrjeGzzg==
   dependencies:
     "@types/node" "*"
     merge-stream "^2.0.0"
@@ -5156,6 +5276,16 @@ regenerate@^1.4.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.2.tgz#b9346d8827e8f5a32f7ba29637d398b69014848a"
   integrity sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==
+
+regenerator-runtime@^0.10.5:
+  version "0.10.5"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
+  integrity sha1-M2w+/BIgrc7dosn6tntaeVWjNlg=
+
+regenerator-runtime@^0.11.0:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
+  integrity sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==
 
 regenerator-runtime@^0.13.4:
   version "0.13.9"
