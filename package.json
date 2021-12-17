@@ -1,6 +1,6 @@
 {
   "name": "@thesoulfresh/interactors",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "interactors and matchers for bigtest",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -65,7 +65,9 @@
   },
   "release-it": {
     "hooks": {
-      "after:init": ["yarn validate"]
+      "after:init": [
+        "yarn validate"
+      ]
     }
   }
 }
