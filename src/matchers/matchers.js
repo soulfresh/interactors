@@ -336,6 +336,7 @@ export function equal(expected) {
   };
 };
 
+/** Alias for `equal` */
 export const equals = equal;
 
 /**
@@ -372,6 +373,7 @@ export function greaterThanOrEqualTo(expected) {
   };
 };
 
+/** alias for `greaterThanOrEqualTo` */
 export const greaterThanOrEqual = greaterThanOrEqualTo;
 
 /**
@@ -408,4 +410,5 @@ export function lessThanOrEqualTo(expected) {
   };
 }
 
+/** Alias for `lessThanOrEqualTo` */
 export const lessThanOrEqual = lessThanOrEqualTo;

@@ -76,6 +76,8 @@ module.exports = {
     Handlebars.registerHelper('add', (a, b) => Number(a) + Number(b))
     /** Trim whitespace from a value */
     Handlebars.registerHelper('trim', (a) => String(a).trim())
+    /** Trim whitespace and new lines */
+    Handlebars.registerHelper('single-line', (a) => a ? String(a).trim().replace(new RegExp('\n', 'g'), '') : '')
     /** Convert the given text to lower case */
     Handlebars.registerHelper('lowercase', function (options) {
       return options.fn(this).toLowerCase()

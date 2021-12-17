@@ -4,6 +4,7 @@
     "allowJs": true
   },
   "typedocOptions": {
-    "excludePrivate": true
+    "excludePrivate": true,
+    "sort": "source-order"
   }
 }

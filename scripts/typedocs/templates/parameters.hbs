@@ -1,6 +1,7 @@
 #### Parameters
-| Name | Type | Default Value |
-| :--- | :--- | :------------ |
+| Name | Type | Default Value | Description |
+| :--- | :--- | :------------ | :---------- |
 {{#each parameters}}
-| {{name}} | {{>type type}} | {{#if defaultValue}}`{{{defaultValue}}}`{{else}}*-*{{/if}} |
+  | {{name}} | {{>type type}} | {{#if defaultValue}}`{{{defaultValue}}}`{{else}}*-*{{/if}} | {{#if (single-line comment.shortText)}}{{single-line comment.shortText}}{{else}}*-*{{/if}} |
 {{/each}}
+

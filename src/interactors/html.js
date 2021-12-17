@@ -13,14 +13,14 @@ function testId(el) {
  * from @interactors/html but also adds:
  *
  * ### Filters
- * - testId : '[data-testid]'
- * - label : '[aria-label]'
- * - text : better text matching
- * - role : '[role]'
+ * - testId : `'[data-testid]'` Get an element by its test id.
+ * - label : `'[aria-label]'` Get an element by its accessibility label.
+ * - text : Get by trimmed text content.
+ * - role : `'[role]'` Get by accessibility role.
  *
  * @type {function}
  */
-export const HTMLPageObject = BigTestHTML.extend('element')
+export const HTML = BigTestHTML.extend('element')
   .filters({
     testId,
     testID: testId,

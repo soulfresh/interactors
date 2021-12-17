@@ -22,7 +22,8 @@
     "test-debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
     "lint": "eslint --max-warnings 0 './src/**/!(.eslintrc)*.{js,jsx}'",
     "clean": "rimraf lib temp.json",
-    "docs": "yarn clean && node ./scripts/typedocs/index.js build src/index.js --out README.md --templates ./docs/templates --repo https://github.com/soulfresh/interactors/tree/main/src",
+    "docs": "yarn clean && node ./scripts/typedocs/index.js build src/index.js --out README.md --templates ./docs/templates --repo https://github.com/soulfresh/interactors/tree/main",
+    "open-docs": "open -a \"Google Chrome\" ./README.md",
     "validate": "yarn clean && yarn test && yarn docs && yarn build",
     "tree-shakeable": "agadoo src/index",
     "release": "echo '🤬 use npx release-it 👈'"
