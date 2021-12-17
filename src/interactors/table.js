@@ -1,4 +1,5 @@
-import { HTML, elementContent } from '~/test';
+import { HTML } from './html';
+import { elementContent } from '../util'
 
 const dataRows = el =>
   Array.from(el.querySelectorAll('tr'))
