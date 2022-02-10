@@ -1,6 +1,6 @@
 {
   "name": "@thesoulfresh/interactors",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "interactors and matchers for bigtest",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",

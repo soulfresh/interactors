@@ -9,31 +9,34 @@ no replacement for actual accessibility testing).
 
 ## API
 
-- interactors
-  - <a href="#printelements">printElements</a>
-  - <a href="#globalactions">GlobalActions</a>
-  - <a href="#globalfilters">GlobalFilters</a>
-  - <a href="#html">HTML</a>
-  - <a href="#table">Table</a>
-  - <a href="#textfield">TextField</a>
-- matchers
-  - <a href="#matchingarray">matchingArray</a>
-  - <a href="#containingarray">containingArray</a>
-  - <a href="#matchingobject">matchingObject</a>
-  - <a href="#containingobject">containingObject</a>
-  - <a href="#any">any</a>
-  - <a href="#anything">anything</a>
-  - <a href="#is">is</a>
-  - <a href="#greaterthan">greaterThan</a>
-  - <a href="#greaterthanorequalto">greaterThanOrEqualTo</a>
-  - <a href="#greaterthanorequal">greaterThanOrEqual</a>
-  - <a href="#lessthan">lessThan</a>
-  - <a href="#lessthanorequalto">lessThanOrEqualTo</a>
-  - <a href="#lessthanorequal">lessThanOrEqual</a>
-- util
-  - <a href="#elementtext">elementText</a>
-  - <a href="#elementcontent">elementContent</a>
-  - <a href="#getlabel">getLabel</a>
+- src
+  - interactors
+    - <a href="#printelements">printElements</a>
+    - <a href="#globalactions">GlobalActions</a>
+    - <a href="#globalfilters">GlobalFilters</a>
+    - <a href="#html">HTML</a>
+    - <a href="#table">Table</a>
+    - <a href="#textfield">TextField</a>
+  - matchers
+    - <a href="#matchingarray">matchingArray</a>
+    - <a href="#containingarray">containingArray</a>
+    - <a href="#matchingobject">matchingObject</a>
+    - <a href="#containingobject">containingObject</a>
+    - <a href="#any">any</a>
+    - <a href="#anything">anything</a>
+    - <a href="#is">is</a>
+    - <a href="#greaterthan">greaterThan</a>
+    - <a href="#greaterthanorequalto">greaterThanOrEqualTo</a>
+    - <a href="#greaterthanorequal">greaterThanOrEqual</a>
+    - <a href="#lessthan">lessThan</a>
+    - <a href="#lessthanorequalto">lessThanOrEqualTo</a>
+    - <a href="#lessthanorequal">lessThanOrEqual</a>
+  - util
+    - <a href="#elementtext">elementText</a>
+    - <a href="#elementcontent">elementContent</a>
+    - <a href="#getlabel">getLabel</a>
+
+# src
 
 # interactors
 
@@ -57,7 +60,7 @@ Print an element DOM to the console.
 
 
 #### Defined in
-- *[interactors/html.js:16](https://github.com/soulfresh/interactors/tree/main/src/interactors/html.js#L16)*
+- *[src/interactors/html.js:16](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/html.js#L16)*
 
 ## GlobalActions
 
@@ -72,7 +75,7 @@ Gives you the following actions:
 
 
 #### Defined in
-- *[interactors/html.js:30](https://github.com/soulfresh/interactors/tree/main/src/interactors/html.js#L30)*
+- *[src/interactors/html.js:30](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/html.js#L30)*
 
 ## GlobalFilters
 
@@ -91,7 +94,7 @@ Gives you the following filters:
 
 
 #### Defined in
-- *[interactors/html.js:44](https://github.com/soulfresh/interactors/tree/main/src/interactors/html.js#L44)*
+- *[src/interactors/html.js:44](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/html.js#L44)*
 
 ## HTML
 
@@ -113,7 +116,7 @@ from @interactors/html but also adds:
 `Function`
 
 #### Defined in
-- *[interactors/html.js:67](https://github.com/soulfresh/interactors/tree/main/src/interactors/html.js#L67)*
+- *[src/interactors/html.js:67](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/html.js#L67)*
 
 ## Table
 
@@ -182,7 +185,7 @@ it('should have the correct cell data.', await () => {
 `any`
 
 #### Defined in
-- *[interactors/table.js:78](https://github.com/soulfresh/interactors/tree/main/src/interactors/table.js#L78)*
+- *[src/interactors/table.js:78](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/table.js#L78)*
 
 ## TextField
 
@@ -208,10 +211,11 @@ __Additional Actions__:
 
 
 
-`any`
+`InteractorConstructor`
 
 #### Defined in
-- *[interactors/textfield.js:24](https://github.com/soulfresh/interactors/tree/main/src/interactors/textfield.js#L24)*
+- *[src/interactors/textfield.js:24](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/textfield.js#L24)*
+
 
 # matchers
 
@@ -246,7 +250,7 @@ Foo().has({value: matchingArray(['Foo', any(Number)])});
 
 
 #### Defined in
-- *[matchers/matchers.js:162](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L162)*
+- *[src/matchers/matchers.js:162](https://github.com/soulfresh/interactors/tree/main/src/src/matchers/matchers.js#L162)*
 
 ## containingArray
 
@@ -277,7 +281,7 @@ Foo().has({value: containingArray(['Foo', 'Bar']);
 
 
 #### Defined in
-- *[matchers/matchers.js:192](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L192)*
+- *[src/matchers/matchers.js:192](https://github.com/soulfresh/interactors/tree/main/src/src/matchers/matchers.js#L192)*
 
 ## matchingObject
 
@@ -311,7 +315,7 @@ Foo().has({value: matchingObject({name: 'foo'})});
 
 
 #### Defined in
-- *[matchers/matchers.js:225](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L225)*
+- *[src/matchers/matchers.js:225](https://github.com/soulfresh/interactors/tree/main/src/src/matchers/matchers.js#L225)*
 
 ## containingObject
 
@@ -343,7 +347,7 @@ Foo().has({value: {name: 'foo'}});
 
 
 #### Defined in
-- *[matchers/matchers.js:252](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L252)*
+- *[src/matchers/matchers.js:252](https://github.com/soulfresh/interactors/tree/main/src/src/matchers/matchers.js#L252)*
 
 ## any
 
@@ -372,7 +376,7 @@ Foo().has({thing: any(Number)});
 
 
 #### Defined in
-- *[matchers/matchers.js:277](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L277)*
+- *[src/matchers/matchers.js:277](https://github.com/soulfresh/interactors/tree/main/src/src/matchers/matchers.js#L277)*
 
 ## anything
 
@@ -390,7 +394,7 @@ Match any value in the same manner as Jest `expect.anything()`
 
 
 #### Defined in
-- *[matchers/matchers.js:294](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L294)*
+- *[src/matchers/matchers.js:294](https://github.com/soulfresh/interactors/tree/main/src/src/matchers/matchers.js#L294)*
 
 ## is
 
@@ -412,7 +416,7 @@ Strict equality check (ie ===).
 
 
 #### Defined in
-- *[matchers/matchers.js:306](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L306)*
+- *[src/matchers/matchers.js:306](https://github.com/soulfresh/interactors/tree/main/src/src/matchers/matchers.js#L306)*
 
 ## greaterThan
 
@@ -434,7 +438,7 @@ Match any number greater than the given value.
 
 
 #### Defined in
-- *[matchers/matchers.js:353](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L353)*
+- *[src/matchers/matchers.js:353](https://github.com/soulfresh/interactors/tree/main/src/src/matchers/matchers.js#L353)*
 
 ## greaterThanOrEqualTo
 
@@ -456,7 +460,7 @@ Match any number greater than or equal to the given value.
 
 
 #### Defined in
-- *[matchers/matchers.js:370](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L370)*
+- *[src/matchers/matchers.js:370](https://github.com/soulfresh/interactors/tree/main/src/src/matchers/matchers.js#L370)*
 
 ## greaterThanOrEqual
 
@@ -478,7 +482,7 @@ alias for `greaterThanOrEqualTo`
 
 
 #### Defined in
-- *[matchers/matchers.js:384](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L384)*
+- *[src/matchers/matchers.js:384](https://github.com/soulfresh/interactors/tree/main/src/src/matchers/matchers.js#L384)*
 
 ## lessThan
 
@@ -500,7 +504,7 @@ Match any number less than the given value.
 
 
 #### Defined in
-- *[matchers/matchers.js:390](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L390)*
+- *[src/matchers/matchers.js:390](https://github.com/soulfresh/interactors/tree/main/src/src/matchers/matchers.js#L390)*
 
 ## lessThanOrEqualTo
 
@@ -522,7 +526,7 @@ Match any number less than or equal to the given value.
 
 
 #### Defined in
-- *[matchers/matchers.js:407](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L407)*
+- *[src/matchers/matchers.js:407](https://github.com/soulfresh/interactors/tree/main/src/src/matchers/matchers.js#L407)*
 
 ## lessThanOrEqual
 
@@ -544,7 +548,8 @@ Alias for `lessThanOrEqualTo`
 
 
 #### Defined in
-- *[matchers/matchers.js:421](https://github.com/soulfresh/interactors/tree/main/src/matchers/matchers.js#L421)*
+- *[src/matchers/matchers.js:421](https://github.com/soulfresh/interactors/tree/main/src/src/matchers/matchers.js#L421)*
+
 
 # util
 
@@ -571,7 +576,7 @@ trim the text.
 
 
 #### Defined in
-- *[util/text-matching.js:41](https://github.com/soulfresh/interactors/tree/main/src/util/text-matching.js#L41)*
+- *[src/util/text-matching.js:41](https://github.com/soulfresh/interactors/tree/main/src/src/util/text-matching.js#L41)*
 
 ## elementContent
 
@@ -632,7 +637,7 @@ const combined = elementContent(el, ['value', 'text'], true);
 
 
 #### Defined in
-- *[util/text-matching.js:133](https://github.com/soulfresh/interactors/tree/main/src/util/text-matching.js#L133)*
+- *[src/util/text-matching.js:133](https://github.com/soulfresh/interactors/tree/main/src/src/util/text-matching.js#L133)*
 
 ## getLabel
 
@@ -656,5 +661,6 @@ label, they will be combined with a space.
 
 
 #### Defined in
-- *[util/text-matching.js:174](https://github.com/soulfresh/interactors/tree/main/src/util/text-matching.js#L174)*
+- *[src/util/text-matching.js:174](https://github.com/soulfresh/interactors/tree/main/src/src/util/text-matching.js#L174)*
+
 
