@@ -165,3 +165,27 @@ export const elementContent = (el, checks = ['text', 'value', 'label'], collect 
   return out;
 };
 
+/**
+ * Get the label text associated with an element.
+ * If the element has multiple objects that define its
+ * label, they will be combined with a space.
+ */
+export function getLabel(el) {
+  if (!el.labels) return '';
+  else {
+    try {
+      return Array.from(el.labels).map(label => {
+        let labelText = elementText(label);
+        if (label.contains(el)) {
+          // Remove the element's text from the label.
+          return labelText.replace(elementText(el), '').trim();
+        } else {
+          return labelText;
+        }
+      }).join(' ');
+    } catch(e) {
+      return '';
+    }
+  }
+}
+

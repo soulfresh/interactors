@@ -1,5 +1,6 @@
+import { prettyDOM } from '@testing-library/dom';
 import { HTML } from './html';
-import { elementContent } from '../util'
+import { elementContent } from '../util';
 
 const dataRows = el =>
   Array.from(el.querySelectorAll('tr'))
@@ -33,6 +34,10 @@ const rowCellValues = rows => rows.map(row => {
  *     This will be a multidimensional array of row and cells
  *     (ex. `[['cell value', 'cell value', 'cell value'], ['cell value', ...]...]`)
  * - `dataValues` *{string[]}* The same as `cellValues` but excluding the header cells.
+ *
+ * __Actions__:
+ *
+ * - `debugDOM` Print the interactor DOM
  *
  * Example Usage:
  * ```js
@@ -72,11 +77,12 @@ const rowCellValues = rows => rows.map(row => {
  */
 export const Table = HTML.extend('table')
   .locator(el => {
+    // TODO Just use el.labels instead
     let label = el.getAttribute('aria-label');
     const id = el.getAttribute('aria-labelledby');
 
     if (label && id)
-      console.warn(`[TablePageObject] A table on the page has both aria-label="${label}" and aria-labelledby="${id}". Using aria-lable.`);
+      console.warn(`[TablePageObject] A table on the page has both aria-label="${label}" and aria-labelledby="${id}". Using aria-label.`);
 
     if (!label) {
       if (id) {
@@ -110,4 +116,7 @@ export const Table = HTML.extend('table')
   // Actions are used to perform actions on the selected element
   // like `click` or `fillIn`.
   // https://frontside.com/bigtest/docs/interactors/locators-filters-actions#actions
-  //.actions({})
+  .actions({
+    debugDOM: async (interactor) => interactor.perform(el => console.log(prettyDOM(el))),
+  })
+

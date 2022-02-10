@@ -29,6 +29,7 @@ no replacement for actual accessibility testing).
 - util
   - <a href="#elementtext">elementText</a>
   - <a href="#elementcontent">elementContent</a>
+  - <a href="#getlabel">getLabel</a>
 
 # interactors
 
@@ -49,7 +50,7 @@ from @interactors/html but also adds:
 `Function`
 
 #### Defined in
-- *[interactors/html.js:23](https://github.com/soulfresh/interactors/tree/main/src/interactors/html.js#L23)*
+- *[interactors/html.js:24](https://github.com/soulfresh/interactors/tree/main/src/interactors/html.js#L24)*
 
 ## Table
 
@@ -71,6 +72,10 @@ __Filters__:
     This will be a multidimensional array of row and cells
     (ex. `[['cell value', 'cell value', 'cell value'], ['cell value', ...]...]`)
 - `dataValues` *{string[]}* The same as `cellValues` but excluding the header cells.
+
+__Actions__:
+
+- `debugDOM` Print the interactor DOM
 
 Example Usage:
 ```js
@@ -114,7 +119,7 @@ it('should have the correct cell data.', await () => {
 `any`
 
 #### Defined in
-- *[interactors/table.js:73](https://github.com/soulfresh/interactors/tree/main/src/interactors/table.js#L73)*
+- *[interactors/table.js:78](https://github.com/soulfresh/interactors/tree/main/src/interactors/table.js#L78)*
 
 # matchers
 
@@ -536,4 +541,28 @@ const combined = elementContent(el, ['value', 'text'], true);
 
 #### Defined in
 - *[util/text-matching.js:133](https://github.com/soulfresh/interactors/tree/main/src/util/text-matching.js#L133)*
+
+## getLabel
+
+  ▸ **getLabel**(`el`) => `string`
+
+Get the label text associated with an element.
+If the element has multiple objects that define its
+label, they will be combined with a space.
+
+
+
+
+#### Parameters
+| Name | Type | Default Value | Description |
+| :--- | :--- | :------------ | :---------- |
+  | el | `any` | *-* | *-* |
+
+
+#### Returns
+`string` 
+
+
+#### Defined in
+- *[util/text-matching.js:173](https://github.com/soulfresh/interactors/tree/main/src/util/text-matching.js#L173)*
 

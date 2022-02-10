@@ -1,3 +1,4 @@
+import { prettyDOM } from '@testing-library/dom';
 import { HTML as BigTestHTML } from '@interactors/html';
 import { elementText } from '../util';
 
@@ -28,5 +29,8 @@ export const HTML = BigTestHTML.extend('element')
     label: el => el.getAttribute('aria-label'),
     text: el => elementText(el),
     role: el => el.getAttribute('role'),
+  })
+  .actions({
+    debug: async interactor => interactor.perform(el => console.log(prettyDOM(el)))
   });
 
