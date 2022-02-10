@@ -1,4 +1,4 @@
-import { TextField } from '@interactors/html';
+import { TextField as TextFieldBT } from '@interactors/html';
 import { GlobalFilters, GlobalActions } from './html';
 
 /**
@@ -21,7 +21,7 @@ import { GlobalFilters, GlobalActions } from './html';
  * - `debugDOM` Pretty print the current DOM.
  * - `debugState` Pretty print the current state of the component.
  */
-export const TextField = TextField.extend('textfield')
+export const TextField = TextFieldBT.extend('textfield')
   .filters({
     ...GlobalFilters
   })

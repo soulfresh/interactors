@@ -10,6 +10,9 @@ no replacement for actual accessibility testing).
 ## API
 
 - interactors
+  - <a href="#printelements">printElements</a>
+  - <a href="#globalactions">GlobalActions</a>
+  - <a href="#globalfilters">GlobalFilters</a>
   - <a href="#html">HTML</a>
   - <a href="#table">Table</a>
   - <a href="#textfield">TextField</a>
@@ -34,6 +37,62 @@ no replacement for actual accessibility testing).
 
 # interactors
 
+## printElements
+
+  ▸ **printElements**(`el`) => `void`
+
+Print an element DOM to the console.
+
+
+
+
+#### Parameters
+| Name | Type | Default Value | Description |
+| :--- | :--- | :------------ | :---------- |
+  | el |  | *-* | *-* |
+
+
+#### Returns
+`void` 
+
+
+#### Defined in
+- *[interactors/html.js:16](https://github.com/soulfresh/interactors/tree/main/src/interactors/html.js#L16)*
+
+## GlobalActions
+
+Provides actions you can merge into any interactor.
+Gives you the following actions:
+
+- debugDOM
+
+
+
+
+
+
+#### Defined in
+- *[interactors/html.js:30](https://github.com/soulfresh/interactors/tree/main/src/interactors/html.js#L30)*
+
+## GlobalFilters
+
+Filters you can merge into any interactor.
+Gives you the following filters:
+
+- testId
+- testID
+- label
+- text
+- role
+
+
+
+
+
+
+#### Defined in
+- *[interactors/html.js:44](https://github.com/soulfresh/interactors/tree/main/src/interactors/html.js#L44)*
+
 ## HTML
 
 An element interactor that extends the HTML interactor
@@ -45,13 +104,16 @@ from @interactors/html but also adds:
 - text : Get by trimmed text content.
 - role : `'[role]'` Get by accessibility role.
 
+### Actions
+- debugDOM : Print the DOM of the interactor
+
 
 
 
 `Function`
 
 #### Defined in
-- *[interactors/html.js:24](https://github.com/soulfresh/interactors/tree/main/src/interactors/html.js#L24)*
+- *[interactors/html.js:67](https://github.com/soulfresh/interactors/tree/main/src/interactors/html.js#L67)*
 
 ## Table
 
@@ -124,12 +186,32 @@ it('should have the correct cell data.', await () => {
 
 ## TextField
 
+Extends the `@interactors/html:TextField` with
+the standard interactors and actions from the
+`HTML` interactor from this package.
+
+__Additional Filters__:
+
+- `testId`
+- `testID`
+- `label`
+- `text`
+- `role`
+
+__Additional Actions__:
+
+- `search` Perform a search
+  - @param {string} searchTerm
+- `debugDOM` Pretty print the current DOM.
+- `debugState` Pretty print the current state of the component.
+
+
 
 
 `any`
 
 #### Defined in
-- *[interactors/textfield.js:3](https://github.com/soulfresh/interactors/tree/main/src/interactors/textfield.js#L3)*
+- *[interactors/textfield.js:24](https://github.com/soulfresh/interactors/tree/main/src/interactors/textfield.js#L24)*
 
 # matchers
 
@@ -557,7 +639,7 @@ const combined = elementContent(el, ['value', 'text'], true);
   ▸ **getLabel**(`el`) => `string`
 
 Get the label text associated with an element.
-If the element has multiple objects that define its
+If the element has multiple object that define it's
 label, they will be combined with a space.
 
 
@@ -574,5 +656,5 @@ label, they will be combined with a space.
 
 
 #### Defined in
-- *[util/text-matching.js:173](https://github.com/soulfresh/interactors/tree/main/src/util/text-matching.js#L173)*
+- *[util/text-matching.js:174](https://github.com/soulfresh/interactors/tree/main/src/util/text-matching.js#L174)*
 
