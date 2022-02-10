@@ -1,6 +1,6 @@
 {
   "name": "@thesoulfresh/interactors",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "interactors and matchers for bigtest",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -58,7 +58,7 @@
     "typescript": "^4.5.4",
     "yargs": "^17.3.0"
   },
-  "dependencies": { },
+  "dependencies": {},
   "peerDependencies": {
     "@interactors/html": "^1.0.0-rc1.0"
   },
