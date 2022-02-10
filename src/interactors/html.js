@@ -1,12 +1,52 @@
 import { prettyDOM } from '@testing-library/dom';
 import { HTML as BigTestHTML } from '@interactors/html';
-import { elementText } from '../util';
+import { elementText, getLabel } from '../util';
 
 /**
  * @param {HTMLElement} el
  */
 function testId(el) {
   return el.getAttribute('data-testid');
+}
+
+/**
+ * Print an element DOM to the console.
+ * @param {HTMLElement|HTMLElement[]|NodeList} el
+ */
+export function printElements(el) {
+  if (el?.length !== undefined) {
+    el.forEach(e => console.log(prettyDOM(e)));
+  } else {
+    console.log(prettyDOM(el));
+  }
+}
+
+/**
+ * Provides actions you can merge into any interactor.
+ * Gives you the following actions:
+ *
+ * - debugDOM
+ */
+export const GlobalActions = {
+  debugDOM: async interactor => interactor.perform(printElements)
+}
+
+/**
+ * Filters you can merge into any interactor.
+ * Gives you the following filters:
+ *
+ * - testId
+ * - testID
+ * - label
+ * - text
+ * - role
+ */
+export const GlobalFilters = {
+  testId,
+  testID: testId,
+  label: getLabel,
+  text: el => elementText(el),
+  role: el => el.getAttribute('role'),
 }
 
 /**
@@ -19,18 +59,16 @@ function testId(el) {
  * - text : Get by trimmed text content.
  * - role : `'[role]'` Get by accessibility role.
  *
+ * ### Actions
+ * - debugDOM : Print the DOM of the interactor
+ *
  * @type {function}
  */
 export const HTML = BigTestHTML.extend('element')
   .filters({
-    testId,
-    testID: testId,
-    // TODO Look for a surrounding label or the aria-label
-    label: el => el.getAttribute('aria-label'),
-    text: el => elementText(el),
-    role: el => el.getAttribute('role'),
+    ...GlobalFilters
   })
   .actions({
-    debug: async interactor => interactor.perform(el => console.log(prettyDOM(el)))
+    ...GlobalActions,
   });
 
