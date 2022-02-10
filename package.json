@@ -58,11 +58,12 @@
     "typescript": "^4.5.4",
     "yargs": "^17.3.0"
   },
-  "dependencies": {
-    "@testing-library/dom": "^8.11.3"
-  },
+  "dependencies": { },
   "peerDependencies": {
     "@interactors/html": "^1.0.0-rc1.0"
+  },
+  "optionalDependencies": {
+    "@testing-library/dom": "^8.11.3"
   },
   "release-it": {
     "hooks": {
