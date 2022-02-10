@@ -7,6 +7,12 @@ All interactors provided by this package work against ARIA semantics so
 if your tests are passing, your accessibility is also decent (though that's
 no replacement for actual accessibility testing).
 
+## Getting Started
+
+    yarn add @thesoulfresh/interactors @testing-library/dom
+
+Would love some help getting Rollup to just compile `@testing-library/dom` into the project.
+
 ## API
 
 - interactors
