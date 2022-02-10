@@ -7,17 +7,12 @@ All interactors provided by this package work against ARIA semantics so
 if your tests are passing, your accessibility is also decent (though that's
 no replacement for actual accessibility testing).
 
-## Getting Started
-
-    yarn add @thesoulfresh/interactors @testing-library/dom
-
-Would love some help getting Rollup to just compile `@testing-library/dom` into the project.
-
 ## API
 
 - interactors
   - <a href="#html">HTML</a>
   - <a href="#table">Table</a>
+  - <a href="#textfield">TextField</a>
 - matchers
   - <a href="#matchingarray">matchingArray</a>
   - <a href="#containingarray">containingArray</a>
@@ -126,6 +121,15 @@ it('should have the correct cell data.', await () => {
 
 #### Defined in
 - *[interactors/table.js:78](https://github.com/soulfresh/interactors/tree/main/src/interactors/table.js#L78)*
+
+## TextField
+
+
+
+`any`
+
+#### Defined in
+- *[interactors/textfield.js:3](https://github.com/soulfresh/interactors/tree/main/src/interactors/textfield.js#L3)*
 
 # matchers
 
