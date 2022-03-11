@@ -11,6 +11,7 @@ no replacement for actual accessibility testing).
 
 - src
   - interactors
+    - <a href="#button">Button</a>
     - <a href="#printelements">printElements</a>
     - <a href="#globalactions">GlobalActions</a>
     - <a href="#globalfilters">GlobalFilters</a>
@@ -39,6 +40,32 @@ no replacement for actual accessibility testing).
 # src
 
 # interactors
+
+## Button
+
+Extends the `@interactors/html:Button` with
+the standard interactors and actions from the
+`HTML` interactor from this package.
+
+__Additional Filters__:
+
+- `testId`
+- `testID`
+- `label`
+- `text`
+- `role`
+
+__Additional Actions__:
+
+- `debugDOM` Pretty print the current DOM.
+
+
+
+
+`InteractorConstructor`
+
+#### Defined in
+- *[src/interactors/button.js:21](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/button.js#L21)*
 
 ## printElements
 

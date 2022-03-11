@@ -1,4 +1,4 @@
-import { Button as ButtonBase } from './html';
+import { Button as ButtonBase } from '@interactors/html';
 import { GlobalFilters, GlobalActions } from './html';
 
 /**
