@@ -75,7 +75,7 @@ Gives you the following actions:
 
 
 #### Defined in
-- *[src/interactors/html.js:30](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/html.js#L30)*
+- *[src/interactors/html.js:32](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/html.js#L32)*
 
 ## GlobalFilters
 
@@ -94,7 +94,7 @@ Gives you the following filters:
 
 
 #### Defined in
-- *[src/interactors/html.js:44](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/html.js#L44)*
+- *[src/interactors/html.js:47](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/html.js#L47)*
 
 ## HTML
 
@@ -116,7 +116,7 @@ from @interactors/html but also adds:
 `Function`
 
 #### Defined in
-- *[src/interactors/html.js:67](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/html.js#L67)*
+- *[src/interactors/html.js:70](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/html.js#L70)*
 
 ## Table
 
@@ -185,7 +185,7 @@ it('should have the correct cell data.', await () => {
 `any`
 
 #### Defined in
-- *[src/interactors/table.js:78](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/table.js#L78)*
+- *[src/interactors/table.js:80](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/table.js#L80)*
 
 ## TextField
 
@@ -203,10 +203,7 @@ __Additional Filters__:
 
 __Additional Actions__:
 
-- `search` Perform a search
-  - @param {string} searchTerm
 - `debugDOM` Pretty print the current DOM.
-- `debugState` Pretty print the current state of the component.
 
 
 
@@ -214,7 +211,7 @@ __Additional Actions__:
 `InteractorConstructor`
 
 #### Defined in
-- *[src/interactors/textfield.js:24](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/textfield.js#L24)*
+- *[src/interactors/textfield.js:21](https://github.com/soulfresh/interactors/tree/main/src/src/interactors/textfield.js#L21)*
 
 
 # matchers

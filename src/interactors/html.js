@@ -21,7 +21,7 @@ export function printElements(el) {
   }
 }
 
-const debugDOM = async interactor => interactor.perform(printElements),
+const debugDOM = async interactor => interactor.perform(printElements);
 
 /**
  * Provides actions you can merge into any interactor.
