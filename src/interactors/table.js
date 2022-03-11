@@ -15,6 +15,8 @@ const rowCellValues = rows => rows.map(row => {
   return cells.map(cell => elementContent(cell, ['text', 'value']))
 });
 
+// const debugDOM = async (interactor) => interactor.perform(el => console.log(prettyDOM(el)));
+
 /**
  * Interact with `<table>` elements.
  *
@@ -116,7 +118,9 @@ export const Table = HTML.extend('table')
   // Actions are used to perform actions on the selected element
   // like `click` or `fillIn`.
   // https://frontside.com/bigtest/docs/interactors/locators-filters-actions#actions
-  .actions({
-    debugDOM: async (interactor) => interactor.perform(el => console.log(prettyDOM(el))),
-  })
+  // .actions({
+  // These should already come from HTML
+  //   debugDOM,
+  //   debug: debugDOM,
+  // })
 

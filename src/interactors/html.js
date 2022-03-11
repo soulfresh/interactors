@@ -21,6 +21,8 @@ export function printElements(el) {
   }
 }
 
+const debugDOM = async interactor => interactor.perform(printElements),
+
 /**
  * Provides actions you can merge into any interactor.
  * Gives you the following actions:
@@ -28,7 +30,8 @@ export function printElements(el) {
  * - debugDOM
  */
 export const GlobalActions = {
-  debugDOM: async interactor => interactor.perform(printElements)
+  debugDOM,
+  debug: debugDOM,
 }
 
 /**

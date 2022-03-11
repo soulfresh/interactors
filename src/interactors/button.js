@@ -1,8 +1,8 @@
-import { TextField as TextFieldBT } from '@interactors/html';
+import { Button as ButtonBase } from './html';
 import { GlobalFilters, GlobalActions } from './html';
 
 /**
- * Extends the `@interactors/html:TextField` with
+ * Extends the `@interactors/html:Button` with
  * the standard interactors and actions from the
  * `HTML` interactor from this package.
  *
@@ -18,11 +18,10 @@ import { GlobalFilters, GlobalActions } from './html';
  *
  * - `debugDOM` Pretty print the current DOM.
  */
-export const TextField = TextFieldBT.extend('textfield')
+export const Button = ButtonBase.extend('button')
   .filters({
     ...GlobalFilters
   })
   .actions({
     ...GlobalActions
   });
-
